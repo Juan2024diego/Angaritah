@@ -37,7 +37,7 @@ export class LoginComponent implements OnInit{
       this.client.postRequest(`http://127.0.0.1:5000/login`, data).subscribe(
             (response: any) => {              
               localStorage.setItem("token", response.token)
-              this.route.navigate(['/main-menu']);
+              this.route.navigate(['/climate']);
             },
             (error) => console.log(error.status)
           );

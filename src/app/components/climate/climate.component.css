@@ -1,0 +1,35 @@
+.ciudades-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  /* Estilos para cada ciudad */
+  .ciudad {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    width: 300px;
+  }
+
+  .ciudad img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+
+  .ciudad h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .ciudad p {
+    margin: 0;
+  }
