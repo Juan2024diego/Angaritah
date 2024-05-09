@@ -11,8 +11,7 @@ import { ClientServiceService } from '../../services/client-service.service';
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
-export class LoginComponent implements OnInit{
-
+export class LoginComponent implements OnInit {
   form!: FormGroup;
   constructor(
     private fb: FormBuilder,
@@ -20,31 +19,29 @@ export class LoginComponent implements OnInit{
     private client: ClientServiceService
   ) { }
 
+
   ngOnInit(): void {
+    localStorage.removeItem("token");
     this.form = this.fb.group({
       email: ['', Validators.email],
       password: ['', Validators.required]
     });
- 
+
   }
 
+
   onSubmit() {
-
     if (this.form!.valid) {
-
-      const data = {email: this.form!.value.email, password: this.form!.value.password};
-
+      const data = { email: this.form!.value.email, password: this.form!.value.password };
       this.client.postRequest(`http://127.0.0.1:5000/login`, data).subscribe(
-            (response: any) => {              
-              localStorage.setItem("token", response.token)
-              this.route.navigate(['/climate']);
-            },
-            (error) => console.log(error.status)
-          );
-
+        (response: any) => {
+          localStorage.setItem("token", response.token)
+          this.route.navigate(['/climate']);
+        },
+        (error) => alert(error.error.status)
+      );
     } else {
       console.log("Form error");
     }
   }
-
 }
