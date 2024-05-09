@@ -8,4 +8,5 @@ To run the project you need to have Docker installed.
 2. Run: docker build -t angular-docker .
 3. Run: docker run -p 4202:4200 angular-docker
 4. Go to the url provided in the Network section.
+5. Enter the system with email: climate@gmail.com and password: 12345
 
