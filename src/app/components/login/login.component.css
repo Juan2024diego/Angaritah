@@ -1,9 +1,27 @@
-.centered-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto; /* Center horizontally */
+.form-styled {
+    background-color: #d8a8ff;
+    color: #ffffff;
     padding: 20px;
-    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.form-styled input[type="submit"] {
+    background-color: #7a5fff;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
     border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-styled input[type="submit"]:hover {
+    background-color: #a06bff;
+}
+
+.centered-form-container {
+    display: flex;
+    justify-content: center; 
+    align-items: flex-start; 
+    height: 100vh; 
+    margin-bottom: 20px; 
   }
